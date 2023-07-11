@@ -26,8 +26,8 @@ void postOrder(Node *root)
     }
 
     cout << root->value << " ";
-    preOrder(root->left);
-    preOrder(root->right);
+    postOrder(root->left);
+    postOrder(root->right);
 }
 
 void preOrder(Node *root)
@@ -51,9 +51,9 @@ void inOrder(Node *root)
         return;
     }
 
-    preOrder(root->left);
+    inOrder(root->left);
     cout << root->value << " ";
-    preOrder(root->right);
+    inOrder(root->right);
 }
 
 int main()
